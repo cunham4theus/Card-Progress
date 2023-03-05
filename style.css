@@ -1,0 +1,118 @@
+body {
+  background-color: #181818;
+  font-family: 'Open Sans', sans-serif;
+  color: aliceblue;
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  flex-wrap: wrap;
+  overflow: hidden;
+  height: 600px;  
+  padding: 50px;
+}
+
+.cards {
+  width: 200px;
+  height: 300px;
+  box-shadow: 0 0 85px #000;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  background-color: #181818;
+  transition: all 0.3s ease-in-out;
+  margin-left: -50px;
+  left: 0;
+}
+
+
+.cards:hover {
+  transform: translateY(-20px);
+  transition: all 0.4s ease-out;
+}
+
+.cards:hover ~ .cards {
+  position: relative;
+  left: 50px;
+  transition: all 0.4s ease-out;
+}
+
+.symbol {   
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 20px;  
+  margin-left: 10px;
+  margin-bottom: 20px;
+  transition: all .3s ease-out;
+  letter-spacing: 3px;
+}
+
+.symbol i {
+  font-size: 60px;
+  transition: all .3s ease-out;
+}
+
+.cards:hover > .html i{
+  color: #bb3720;
+}
+
+.cards:hover > .css i{
+  color: #018ccc;
+}
+
+.cards:hover > .js i{
+  color: yellow;
+}
+
+.cards:hover > .git i{
+  color: #f00101;
+}
+
+.bar {
+  width: 90%;
+  height: 5px;
+  background-color: #444;
+  margin: 0 auto;
+}
+
+.progress {
+  margin-top: 10px;
+}
+
+.stroke { 
+  stroke: aliceblue;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
+  transition: 0.6s ease-out;
+}
+
+svg {
+  stroke-width: 3px;
+}
+.cards:hover .stroke-html {
+  stroke-dashoffset: 80;
+  stroke: #bb3720;
+}
+.cards:hover .stroke-css {
+  stroke-dashoffset: 70;
+  stroke: #018ccc;
+}
+.cards:hover .stroke-js {
+  stroke-dashoffset: 200;
+  stroke: yellow;
+}
+
+.cards:hover .stroke-git {
+  stroke-dashoffset: 150;
+  stroke: #f00101;
+}
